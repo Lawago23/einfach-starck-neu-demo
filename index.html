@@ -103,6 +103,14 @@ main>section:not(.hero)>.wrap:not(.pz-split):not(.bk-tl):not(.im-grid):not(.em-v
 .im-strip span{position:absolute;left:0;bottom:0;background:#e5322b;color:#fff;font:400 22px 'Anton';text-transform:uppercase;padding:8px 16px;letter-spacing:.04em}
 @media(max-width:900px){.im-grid{grid-template-columns:1fr}.im-col,.im-col2{display:none}.im-strip{grid-template-columns:1fr}}
 
+.sk-foot{padding:clamp(48px,7vw,100px) 0 28px}
+.sk-foot .wrap{max-width:560px;margin:0 auto;padding:0 var(--gutter,24px)}
+.sk-legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;font-size:12px;opacity:.75}
+.f-im{background:var(--p-bg);color:#101010;text-align:center;font-family:'IBM Plex Mono',monospace}
+.f-im h2{font:400 44px 'Anton';text-transform:uppercase;margin:18px 0 6px}.f-im p{margin:6px 0 20px}
+.f-im-t{letter-spacing:.2em;font-size:13px;color:#55534d}
+.f-im a{color:inherit}.f-im .btn{margin-bottom:8px}
+.nav__link{text-transform:uppercase;letter-spacing:.08em;font-size:13px!important}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -146,30 +154,7 @@ main>section:not(.hero)>.wrap:not(.pz-split):not(.bk-tl):not(.im-grid):not(.em-v
 <section id="roesterei" class="ly"><div class="wrap"><h2>Was bei uns über die Theke geht</h2><ul class="im-strip"><li><figure><img src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Pommes mit Ketchup auf einem Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Pommes</span></li><li><figure><img src="assets/img/photo-f81781745-960.jpg" srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Schale mit Zwiebelringen und Pommes auf einem Holztisch" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Zum Teilen</span></li><li><figure><img src="assets/img/photo-f125060579-960.jpg" srcset="assets/img/photo-f125060579-500.jpg 500w, assets/img/photo-f125060579-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Wurst im Teig auf einem gelben Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Auf die Hand</span></li></ul></div></section>
 </main>
 
-<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
-  <div class="wrap">
-    <div class="closing__cta close--type">
-      <div class="section-head"><h2 id="close-h">Imbiss zum Mitnehmen</h2><p class="t-lead">Bestellen Sie am Fenster und essen Sie draußen.</p></div>
-      <a class="btn btn--primary btn--xl" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-    </div>
-    <div class="closing__links">
-      <div class="grid">
-        <div class="span-6 stack-4">
-          <address class="footer__address">Terra Vulcania, Mayen</address>
-          <p><a class="link" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen</a></p>
-        </div>
-        <div class="span-6 start-7 stack-4">
-          <h4>Öffnungszeiten</h4>
-          <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>11:00 bis 19:00</dd><dt>Samstag</dt><dd>11:00 bis 17:00</dd><dt>Sonntag</dt><dd>Ruhetag</dd></dl>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <span>&copy; 2026 einfach starck der INbiss &nbsp; Beispieldaten</span>
-        <a class="credits" href="credits.html">Fotos von Wikimedia Commons</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<footer class="sk-foot f-im" id="contact"><div class="wrap"><p class="f-im-t">- - - - - - - - - - - - - - - - - -</p><h2>Imbiss zum Mitnehmen</h2><p>Bestellen Sie am Fenster und essen Sie draußen.</p><a class="btn btn--primary btn--xl" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen</a><p class="f-im-t">Danke und bis gleich</p><div class="sk-legal"><span>&copy; 2026 einfach starck der INbiss &nbsp; Beispieldaten</span><a class="credits" href="credits.html">Fotos von Wikimedia Commons</a></div></div></footer>
 <nav class="actionbar" aria-label="Schnellzugriff">
   <a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt</a>
 </nav>
