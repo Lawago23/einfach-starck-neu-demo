@@ -1,0 +1,192 @@
+<!doctype html>
+<!-- Deal: place (Café mit Rösterei) · palette chalk-tomato (warmer Papierton und ein Tomatenrot, passend zu Kaffee, Holz und Dampf) · nunito · radius soft · nav-cards · footer-columns · colour-band · block · arc · offer strip · place photo-chapters · type moment name -->
+<html lang="de" data-type="place" data-radius="soft" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>einfach starck der INbiss: Imbiss in Mayen</title>
+<meta name="description" content="Imbiss an der Terra Vulcania in Mayen. Espresso und Filterkaffee aus eigener Röstung, offen täglich ab 8 Uhr.">
+<meta name="site-kind" content="other"><meta name="page-type" content="place"><meta name="page-kind" content="place">
+<meta property="og:title" content="einfach starck der INbiss: Imbiss in Mayen"><meta property="og:image" content="share.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23b8381f'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f8f5ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f8f5ef; --p-surface: #ede7dc; --p-ink: #1f1b18; --p-muted: #645c54;
+  --p-accent: #b8381f; --p-accent-ink: #ffffff; --p-action: #b8381f; --p-action-ink: #ffffff;
+  --p-inv-bg: #1f1b18; --p-inv-surface: #2c2724; --p-inv-ink: #f8f5ef; --p-inv-muted: #9e9a95;
+  --p-inv-accent: #f8f5ef; --p-inv-accent-ink: #1f1b18; --p-inv-action: #f8f5ef; --p-inv-action-ink: #1f1b18;
+  --font-display: "Nunito", system-ui, sans-serif;
+  --font-text: "Nunito", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+.rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
+.strip { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 24px; margin-top: 56px; }
+.strip figure { margin: 0; aspect-ratio: 1/1; overflow: hidden; }
+.strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.strip figure:hover img { transform: scale(1.03); }
+@media (max-width: 767px) { .strip { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
+.hours dd{white-space:nowrap}
+:root{--p-bg:#ecebe5;--p-surface:#ffffff;--p-ink:#101010;--p-muted:#55534d;--p-accent:#e5322b;--p-accent-ink:#fff;--p-action:#e5322b;--p-action-ink:#fff;--p-inv-bg:#101010;--p-inv-surface:#1d1d1d;--p-inv-ink:#ecebe5;--p-inv-muted:#9c9a92;--p-inv-accent:#ecebe5;--p-inv-accent-ink:#101010;--p-inv-action:#e5322b;--p-inv-action-ink:#fff;--font-display:'Anton',Impact,sans-serif;--font-text:'IBM Plex Mono',ui-monospace,monospace;--display-weight:400;--display-tracking:0.005em;}
+
+.sk-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.sk-w>span{display:inline-block;transform:translateY(110%);animation:skw .9s cubic-bezier(.2,.7,.1,1) forwards;animation-delay:calc(.15s + var(--i)*.09s)}
+@keyframes skw{to{transform:none}}
+.sk-js .rows li{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.1,1)}
+.sk-js .rows.in li{opacity:1;transform:none}
+.sk-js .rows.in li:nth-child(2){transition-delay:.08s}.sk-js .rows.in li:nth-child(3){transition-delay:.16s}.sk-js .rows.in li:nth-child(4){transition-delay:.24s}
+.sk-js .mo-ph__ch,.sk-js .strip figure,.sk-js .visit{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.1,1)}
+.sk-js .mo-ph__ch.in,.sk-js .strip figure.in,.sk-js .visit.in{opacity:1;transform:none}
+.hero.hero--place .hero__text>*+*{margin-top:22px!important}
+.hero.hero--place .hero__text>.btn-row{margin-top:30px!important}
+.hero.hero--place .hero__text>*{grid-column:1/-1!important;grid-row:auto!important}
+.sk-clock{display:none}
+@media(min-width:1024px){.sk-clock{display:flex}}
+@media(max-width:1023px){.hero.hero--place .hero__text{gap:0!important}.hero.hero--place>.wrap>.hero-text{align-items:flex-end!important}}
+.sk-rm .sk-w>span{transform:none;animation:none}
+@media (prefers-reduced-motion:reduce){.sk-w>span{transform:none;animation:none}}
+
+body{background:var(--p-bg)}
+.hero--place h1{text-transform:uppercase;font-size:clamp(52px,8vw,120px);line-height:.92;grid-column:1/-1}
+.hero--place .hero__lead{grid-column:1/span 6}.hero--place .hero__text>.btn-row{grid-column:1/span 6}
+.hero--place>.hero__bg{filter:contrast(1.05) saturate(1.1)}
+.hero--place::before{content:"";position:absolute;left:0;right:0;top:var(--nav);height:var(--photo);z-index:1;background:repeating-linear-gradient(0deg,rgba(0,0,0,.0) 0 3px,rgba(0,0,0,.07) 3px 4px);pointer-events:none}
+.sk-stamp{position:absolute;z-index:4;right:5vw;top:calc(var(--nav,72px) + 28px);padding:10px 18px;border:3px solid #e5322b;color:#e5322b;font:400 clamp(18px,2.2vw,28px) 'Anton';text-transform:uppercase;letter-spacing:.04em;background:rgba(236,235,229,.92);transform:rotate(-8deg) scale(3);opacity:0;animation:stamp .5s .9s cubic-bezier(.2,.9,.2,1.2) forwards}
+@keyframes stamp{to{transform:rotate(-8deg) scale(1);opacity:1}}
+.grid--top .span-4{background:#fff;padding:28px 26px 34px;position:relative;box-shadow:0 1px 0 rgba(0,0,0,.08);-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%}
+.t-label{font-family:'Anton';font-size:26px;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px dashed #101010;padding-bottom:12px;color:var(--p-ink)}
+.rows li{border-bottom:1px dashed rgba(16,16,16,.35)}
+.rows__name small{font-size:13px}
+.rows__value{font-weight:600}
+.sk-js .rows li{transform:translateX(-12px)}
+.sk-js .rows.in li{transform:none}
+.nav{background:var(--p-bg);border-bottom:2px solid #101010}
+.section h2{text-transform:uppercase;font-size:clamp(40px,5vw,72px)}
+@media(prefers-reduced-motion:reduce){.sk-stamp{animation:none;opacity:1;transform:rotate(-8deg)}}
+
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js"><link rel="modulepreload" href="assets/moments/lib.js"><link rel="modulepreload" href="assets/moments/photo-chapters/moment.js">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Zum Inhalt</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>einfach starck der INbiss</a>
+    <nav class="nav__links" aria-label="Hauptmenü">
+      <div class="nav__item"><a class="nav__link" href="#karte">Karte</a></div>
+      <div class="nav__item"><a class="nav__link" href="#roesterei">Klassiker</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Besuch</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menü"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--place" data-enter aria-labelledby="hero-h">
+    <img class="hero__bg" data-phone-fill src="assets/img/photo-f147144543-960.jpg" srcset="assets/img/photo-f147144543-500.jpg 500w, assets/img/photo-f147144543-960.jpg 960w" sizes="(max-width: 639px) 188vw, 100vw" width="1920" height="1280" alt="Currywurst mit Brötchen in einer Holzschale auf einem Tisch" fetchpriority="high" decoding="async" data-source="stand-in" style="--ly-pos: 50% 50%">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Imbiss an der Terra Vulcania in Mayen</h1>
+        <p class="hero__lead">Currywurst, Pommes und Snacks, frisch zubereitet und schnell auf der Hand.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen</a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h" style="--h: 1">
+    <div class="wrap grid grid--top">
+      <div class="span-6">
+        <div class="visit visit--card">
+          <div class="visit__head"><h2 id="visit-h">Besuch</h2></div>
+          <div class="visit__cols">
+            <div class="visit__col">
+              <address class="visit__address">Terra Vulcania<br>Mayen</address>
+            </div>
+            <div class="visit__col">
+              <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>11:00 bis 19:00</dd><dt>Samstag</dt><dd>11:00 bis 17:00</dd><dt>Sonntag</dt><dd>Ruhetag</dd></dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: .8"><img src="assets/img/photo-f150783298-960.jpg" srcset="assets/img/photo-f150783298-500.jpg 500w, assets/img/photo-f150783298-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Currywurst mit Gabel in einer Pappschale" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure>
+    </div>
+  </section>
+
+  <section class="section" id="karte" aria-labelledby="karte-h" style="--h: 2">
+    <div class="wrap">
+      <div class="section-head--split">
+        <h2 id="karte-h">Die Karte</h2>
+        <p>Alle Preise inklusive Steuer. <a class="link" href="#visit">Zur Anfahrt</a></p>
+      </div>
+      <div class="grid grid--top" style="margin-top:56px"><div class="span-4"><h3 class="t-label">Warm</h3><ul class="rows"><li><span class="rows__name">Currywurst</span><span class="rows__value" data-assumed>5,50 €</span></li><li><span class="rows__name">Bratwurst im Brötchen</span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Currywurst mit Pommes</span><span class="rows__value" data-assumed>7,50 €</span></li><li><span class="rows__name">Frikadelle</span><span class="rows__value" data-assumed>3,50 €</span></li></ul></div><div class="span-4"><h3 class="t-label">Beilagen</h3><ul class="rows"><li><span class="rows__name">Pommes</span><span class="rows__value" data-assumed>3,50 €</span></li><li><span class="rows__name">Pommes Spezial<small>Ketchup, Mayo</small></span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Zwiebelringe</span><span class="rows__value" data-assumed>3,80 €</span></li><li><span class="rows__name">Brötchen</span><span class="rows__value" data-assumed>0,80 €</span></li></ul></div><div class="span-4"><h3 class="t-label">Getränke</h3><ul class="rows"><li><span class="rows__name">Wasser</span><span class="rows__value" data-assumed>2,00 €</span></li><li><span class="rows__name">Cola 0,33 l</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Kaffee</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Bier 0,33 l</span><span class="rows__value" data-assumed>3,00 €</span></li></ul></div></div>
+      
+    </div>
+  </section>
+
+  <section class="section" id="roesterei" data-moment="photo-chapters" aria-labelledby="roesterei-h">
+    <div class="wrap mo-ph">
+      <div class="mo-ph__head"><h2 id="roesterei-h">Was bei uns über die Theke geht</h2><p>Drei Klassiker vom Imbiss.</p></div>
+      <ol class="mo-ph__list"><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" width="960" height="640" alt="Pommes mit Ketchup auf einem Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Pommes</h3><p>Knusprig frittiert, mit Ketchup oder Mayo.</p></li><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f81781745-960.jpg" srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w" width="960" height="640" alt="Eine Schale mit Zwiebelringen und Pommes auf einem Holztisch" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Zum Teilen</h3><p>Eine Schale für zwei, dazu ein kühles Getränk.</p></li><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f125060579-960.jpg" srcset="assets/img/photo-f125060579-500.jpg 500w, assets/img/photo-f125060579-960.jpg 960w" width="960" height="640" alt="Eine Wurst im Teig auf einem gelben Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Auf die Hand</h3><p>Warm eingepackt und in einer Minute fertig.</p></li></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head"><h2 id="close-h">Imbiss zum Mitnehmen</h2><p class="t-lead">Bestellen Sie am Fenster und essen Sie draußen.</p></div>
+      <a class="btn btn--primary btn--xl" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <address class="footer__address">Terra Vulcania, Mayen</address>
+          <p><a class="link" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen</a></p>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h4>Öffnungszeiten</h4>
+          <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>8:00 bis 18:00</dd><dt>Samstag</dt><dd>9:00 bis 17:00</dd><dt>Sonntag</dt><dd>10:00 bis 16:00</dd></dl>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 einfach starck der INbiss &nbsp; Beispieldaten</span>
+        <a class="credits" href="credits.html">Fotos von Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<nav class="actionbar" aria-label="Schnellzugriff">
+  <a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt</a>
+</nav>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('sk-js');
+if(rm){document.documentElement.classList.add('sk-rm');return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+document.querySelectorAll('.rows,.sk-rev,.mo-ph__ch,.strip figure,.visit').forEach(function(el){io.observe(el)});
+var h=document.querySelector('.hero h1');
+if(h&&!h.dataset.split){h.dataset.split=1;var w=h.textContent.trim().split(/\s+/);h.setAttribute('aria-label',h.textContent.trim());h.innerHTML=w.map(function(x,i){return '<span class="sk-w" aria-hidden="true" style="--i:'+i+'"><span>'+x+'</span></span>'}).join(' ');}
+var par=document.querySelectorAll('[data-par]');
+if(par.length){var t=0;addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;par.forEach(function(p){var r=p.getBoundingClientRect();var k=(r.top+r.height/2-innerHeight/2)/innerHeight;p.style.setProperty('--py',(k*-24).toFixed(1)+'px')})})},{passive:true});}
+})();
+</script><script>(function(){var h=document.querySelector('.hero--place');if(!h)return;var s=document.createElement('div');s.className='sk-stamp';s.setAttribute('aria-hidden','true');s.textContent='Frisch gemacht';h.appendChild(s)})();</script>
+</body>
+</html>
