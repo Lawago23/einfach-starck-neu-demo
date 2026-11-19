@@ -72,6 +72,37 @@ body{background:var(--p-bg)}
 .section h2{text-transform:uppercase;font-size:clamp(40px,5vw,72px)}
 @media(prefers-reduced-motion:reduce){.sk-stamp{animation:none;opacity:1;transform:rotate(-8deg)}}
 
+
+main>section:not(.hero){height:auto!important;min-height:0}
+main>section.ly{padding:clamp(72px,9vw,140px) 0!important}
+main>section:not(.hero)>.wrap{height:auto!important}
+main>section:not(.hero)>.wrap:not(.pz-split):not(.bk-tl):not(.im-grid):not(.em-visit){display:block!important}
+.wrap.pz-split,.wrap.bk-tl,.wrap.im-grid,.wrap.em-visit{display:grid!important}
+.dn-visit .wrap{display:grid!important}
+.em-head{display:flex}
+.ly{padding:clamp(72px,9vw,140px) 0}
+.ly .wrap{max-width:1296px;margin:0 auto;padding:0 var(--gutter,24px)}
+.ly h2{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:var(--display-tracking);font-size:clamp(36px,5.2vw,76px);line-height:1}
+.ly img{display:block;width:100%;height:100%;object-fit:cover}
+
+.im-grid{display:grid;grid-template-columns:1fr minmax(0,520px) 1fr;gap:clamp(24px,4vw,64px);align-items:start}
+.im-col{display:grid;gap:28px;margin-top:80px}.im-col2{margin-top:260px}
+.im-ph{margin:0;aspect-ratio:3/4;overflow:hidden;transform:translateY(var(--py,0))}
+.im-bon{background:#fff;padding:36px 34px 46px;font:400 15px/1.5 'IBM Plex Mono',monospace;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;padding-bottom:60px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
+.im-top{text-align:center;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.im-bon hr{border:0;border-top:2px dashed #101010;margin:18px 0}
+.im-bon h2{font:400 56px/1 'Anton';text-transform:uppercase;text-align:center}
+.im-h{font:400 24px 'Anton';text-transform:uppercase;margin:22px 0 4px;letter-spacing:.04em}
+.im-visit{margin-top:24px;display:grid;gap:14px;font-style:normal}.im-visit address{font-style:normal;font-weight:600}
+.im-visit .hours{display:grid;grid-template-columns:auto auto;justify-content:space-between;gap:4px 12px}
+.im-code{height:54px;margin-top:26px;background:repeating-linear-gradient(90deg,#101010 0 2px,#fff 2px 5px,#101010 5px 6px,#fff 6px 10px,#101010 10px 13px,#fff 13px 15px)}
+.im-strip{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.im-strip li{position:relative;overflow:hidden;aspect-ratio:4/5}
+.im-strip figure{margin:0;height:100%}.im-strip img{transition:transform .7s}
+.im-strip li:hover img{transform:scale(1.06)}
+.im-strip span{position:absolute;left:0;bottom:0;background:#e5322b;color:#fff;font:400 22px 'Anton';text-transform:uppercase;padding:8px 16px;letter-spacing:.04em}
+@media(max-width:900px){.im-grid{grid-template-columns:1fr}.im-col,.im-col2{display:none}.im-strip{grid-template-columns:1fr}}
+
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -106,42 +137,13 @@ body{background:var(--p-bg)}
     </div></div>
   </section>
 
-  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h" style="--h: 1">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="visit visit--card">
-          <div class="visit__head"><h2 id="visit-h">Besuch</h2></div>
-          <div class="visit__cols">
-            <div class="visit__col">
-              <address class="visit__address">Terra Vulcania<br>Mayen</address>
-            </div>
-            <div class="visit__col">
-              <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>11:00 bis 19:00</dd><dt>Samstag</dt><dd>11:00 bis 17:00</dd><dt>Sonntag</dt><dd>Ruhetag</dd></dl>
-            </div>
-          </div>
-        </div>
-      </div>
-      <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: .8"><img src="assets/img/photo-f150783298-960.jpg" srcset="assets/img/photo-f150783298-500.jpg 500w, assets/img/photo-f150783298-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Currywurst mit Gabel in einer Pappschale" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure>
-    </div>
-  </section>
-
-  <section class="section" id="karte" aria-labelledby="karte-h" style="--h: 2">
-    <div class="wrap">
-      <div class="section-head--split">
-        <h2 id="karte-h">Die Karte</h2>
-        <p>Alle Preise inklusive Steuer. <a class="link" href="#visit">Zur Anfahrt</a></p>
-      </div>
-      <div class="grid grid--top" style="margin-top:56px"><div class="span-4"><h3 class="t-label">Warm</h3><ul class="rows"><li><span class="rows__name">Currywurst</span><span class="rows__value" data-assumed>5,50 €</span></li><li><span class="rows__name">Bratwurst im Brötchen</span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Currywurst mit Pommes</span><span class="rows__value" data-assumed>7,50 €</span></li><li><span class="rows__name">Frikadelle</span><span class="rows__value" data-assumed>3,50 €</span></li></ul></div><div class="span-4"><h3 class="t-label">Beilagen</h3><ul class="rows"><li><span class="rows__name">Pommes</span><span class="rows__value" data-assumed>3,50 €</span></li><li><span class="rows__name">Pommes Spezial<small>Ketchup, Mayo</small></span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Zwiebelringe</span><span class="rows__value" data-assumed>3,80 €</span></li><li><span class="rows__name">Brötchen</span><span class="rows__value" data-assumed>0,80 €</span></li></ul></div><div class="span-4"><h3 class="t-label">Getränke</h3><ul class="rows"><li><span class="rows__name">Wasser</span><span class="rows__value" data-assumed>2,00 €</span></li><li><span class="rows__name">Cola 0,33 l</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Kaffee</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Bier 0,33 l</span><span class="rows__value" data-assumed>3,00 €</span></li></ul></div></div>
-      
-    </div>
-  </section>
-
-  <section class="section" id="roesterei" data-moment="photo-chapters" aria-labelledby="roesterei-h">
-    <div class="wrap mo-ph">
-      <div class="mo-ph__head"><h2 id="roesterei-h">Was bei uns über die Theke geht</h2><p>Drei Klassiker vom Imbiss.</p></div>
-      <ol class="mo-ph__list"><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" width="960" height="640" alt="Pommes mit Ketchup auf einem Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Pommes</h3><p>Knusprig frittiert, mit Ketchup oder Mayo.</p></li><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f81781745-960.jpg" srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w" width="960" height="640" alt="Eine Schale mit Zwiebelringen und Pommes auf einem Holztisch" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Zum Teilen</h3><p>Eine Schale für zwei, dazu ein kühles Getränk.</p></li><li class="mo-ph__ch"><figure class="mo-ph__pic"><img src="assets/img/photo-f125060579-960.jpg" srcset="assets/img/photo-f125060579-500.jpg 500w, assets/img/photo-f125060579-960.jpg 960w" width="960" height="640" alt="Eine Wurst im Teig auf einem gelben Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><h3>Auf die Hand</h3><p>Warm eingepackt und in einer Minute fertig.</p></li></ol>
-    </div>
-  </section>
+<section class="ly im-wrap" id="karte"><div class="wrap im-grid">
+<div class="im-col"><figure class="im-ph" data-par><img src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Pommes mit Ketchup auf einem Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><figure class="im-ph" data-par><img src="assets/img/photo-f125060579-960.jpg" srcset="assets/img/photo-f125060579-500.jpg 500w, assets/img/photo-f125060579-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Wurst im Teig auf einem gelben Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure></div>
+<article class="im-bon sk-rev"><p class="im-top">*** einfach starck der INbiss ***</p><p class="im-top">Bon Nr. 0042 &nbsp; Tisch 1 &nbsp; Kasse 1</p><hr><h2>Die Karte</h2><h3 class="im-h">Warm</h3><ul class="rows"><li><span class="rows__name">Currywurst</span><span class="rows__value" data-assumed>5,50 €</span></li><li><span class="rows__name">Bratwurst im Brötchen</span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Currywurst mit Pommes</span><span class="rows__value" data-assumed>7,50 €</span></li><li><span class="rows__name">Frikadelle</span><span class="rows__value" data-assumed>3,50 €</span></li></ul><h3 class="im-h">Beilagen</h3><ul class="rows"><li><span class="rows__name">Pommes</span><span class="rows__value" data-assumed>3,50 €</span></li><li><span class="rows__name">Pommes Spezial<small>Ketchup, Mayo</small></span><span class="rows__value" data-assumed>4,00 €</span></li><li><span class="rows__name">Zwiebelringe</span><span class="rows__value" data-assumed>3,80 €</span></li><li><span class="rows__name">Brötchen</span><span class="rows__value" data-assumed>0,80 €</span></li></ul><h3 class="im-h">Getränke</h3><ul class="rows"><li><span class="rows__name">Wasser</span><span class="rows__value" data-assumed>2,00 €</span></li><li><span class="rows__name">Cola 0,33 l</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Kaffee</span><span class="rows__value" data-assumed>2,50 €</span></li><li><span class="rows__name">Bier 0,33 l</span><span class="rows__value" data-assumed>3,00 €</span></li></ul><hr><p class="im-top">Vielen Dank, bis gleich!</p>
+<div class="im-visit" id="visit"><address>Terra Vulcania, Mayen</address><dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>11:00 bis 19:00</dd><dt>Samstag</dt><dd>11:00 bis 17:00</dd><dt>Sonntag</dt><dd>Ruhetag</dd></dl><a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=Terra%20Vulcania%20Mayen">Anfahrt ansehen</a></div><div class="im-code" aria-hidden="true"></div></article>
+<div class="im-col im-col2"><figure class="im-ph" data-par><img src="assets/img/photo-f81781745-960.jpg" srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Schale mit Zwiebelringen und Pommes auf einem Holztisch" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure></div>
+</div></section>
+<section id="roesterei" class="ly"><div class="wrap"><h2>Was bei uns über die Theke geht</h2><ul class="im-strip"><li><figure><img src="assets/img/photo-f119348581-960.jpg" srcset="assets/img/photo-f119348581-500.jpg 500w, assets/img/photo-f119348581-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Pommes mit Ketchup auf einem Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Pommes</span></li><li><figure><img src="assets/img/photo-f81781745-960.jpg" srcset="assets/img/photo-f81781745-500.jpg 500w, assets/img/photo-f81781745-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Schale mit Zwiebelringen und Pommes auf einem Holztisch" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Zum Teilen</span></li><li><figure><img src="assets/img/photo-f125060579-960.jpg" srcset="assets/img/photo-f125060579-500.jpg 500w, assets/img/photo-f125060579-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 50vw" width="960" height="640" alt="Eine Wurst im Teig auf einem gelben Teller" loading=lazy decoding="async" data-source="stand-in" style="object-position:50% 50%" ></figure><span>Auf die Hand</span></li></ul></div></section>
 </main>
 
 <footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
@@ -158,7 +160,7 @@ body{background:var(--p-bg)}
         </div>
         <div class="span-6 start-7 stack-4">
           <h4>Öffnungszeiten</h4>
-          <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>8:00 bis 18:00</dd><dt>Samstag</dt><dd>9:00 bis 17:00</dd><dt>Sonntag</dt><dd>10:00 bis 16:00</dd></dl>
+          <dl class="hours" data-assumed><dt>Montag bis Freitag</dt><dd>11:00 bis 19:00</dd><dt>Samstag</dt><dd>11:00 bis 17:00</dd><dt>Sonntag</dt><dd>Ruhetag</dd></dl>
         </div>
       </div>
       <div class="footer__legal">
